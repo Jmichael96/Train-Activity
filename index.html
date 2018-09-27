@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Changa" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div id="jumbo" class="jumbotron">
+        <h1 id="head" class="text-center">TRAIN TIME</h1> 
+    </div>
+    <div class="table-responsive">
+        <table id="full-table"class="table">
+            <thead>
+              <tr>
+                <th id="t-train-name" scope="col">Train Name</th>
+                <th id="t-destination"scope="col">Destination</th>
+                <th id="t-frequency" scope="col">Frequency (min)</th>
+                <th id="t-next-arrival"scope="col">Next Arrival</th>
+                <th id="t-minutes-away"scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody class="tBod">
+                <!-- <td id="nameT"></td>
+                <td id="destinationT"></td>
+                <td id="frequencyT"></td>
+                <td id="arrivalT"></td> -->
+            </tbody>
+        </table>
+    </div> 
+
+    <form class="">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label id="label-name" class="input-group-text">Train Name</label>
+                </div>
+                <input type="text" class="form-control text-white" id="train-name">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label id="label-destination" class="input-group-text">Destination</label>
+                </div>
+                <input type="text" class="form-control text-white" id="destination">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label id="label-first-time"class="input-group-text">First Train Time></label>
+                </div>
+                    <select required class="custom-select" id="train-hours">
+                        <option selected value="">Hours (HH)</option>
+                        <option value="00">00 (12 am)</option>
+                        <option value="01">01 (1 am)</option>
+                        <option value="02">02 (2 am)</option>
+                        <option value="03">03 (3 am)</option>
+                        <option value="04">04 (4 am)</option>
+                        <option value="05">05 (5 am)</option>
+                        <option value="06">06 (6 am)</option>
+                        <option value="07">07 (7 am)</option>
+                        <option value="08">08 (8 am)</option>
+                        <option value="09">09 (9 am)</option>
+                        <option value="10">10 (10 am)</option>
+                        <option value="11">11 (11 am)</option>
+                        <option value="12">12 (12 pm)</option>
+                        <option value="13">13 (1 pm)</option>
+                        <option value="14">14 (2 pm)</option>
+                        <option value="15">15 (3 pm)</option>
+                        <option value="16">16 (4 pm)</option>
+                        <option value="17">17 (5 pm)</option>
+                        <option value="18">18 (6 pm)</option>
+                        <option value="19">19 (7 pm)</option>
+                        <option value="20">20 (8 pm)</option>
+                        <option value="21">21 (9 pm)</option>
+                        <option value="22">22 (10 pm)</option>
+                        <option value="23">23 (11 pm)</option>
+                    </select>
+                
+                    <select required class="custom-select" id="train-minutes">
+                        <option selected value="">Minutes (MM)</option>
+                        <option value="00">:00</option>
+                        <option value="05">:05</option>
+                        <option value="10">:10</option>
+                        <option value="15">:15</option>
+                        <option value="20">:20</option>
+                        <option value="25">:25</option>
+                        <option value="30">:30</option>
+                        <option value="35">:35</option>
+                        <option value="40">:40</option>
+                        <option value="45">:45</option>
+                        <option value="50">:50</option>
+                        <option value="55">:55</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label id="label-frequency"class="input-group-text">Frequency(Min)</label>
+                    </div>
+                    <input type="text" class="form-control text-white" id="frequency">
+                </div>
+
+            <button id="submit-button" type="submit" class="btn btn-default">SUBMIT</button>
+    </form>
+
+</div>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script type="text/javascript" src="./assets/javascript/app.js"></script>
+</body>
+</html>

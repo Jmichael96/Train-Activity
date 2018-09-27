@@ -1,0 +1,105 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    font-family: 'Arvo', serif;
+}
+body{
+    background-image: URL("../images/train1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Arvo', serif;
+}
+
+/* style of the head text, background color, font and color of all elements in the container */
+.container{
+    background-color: rgb(54, 54, 54, .6);
+    color:white;
+    font-family: 'Arvo', serif;
+}
+#jumbo{
+    background-color: rgb(158, 42, 4, .7);
+}
+#head{
+    font-size: 62px;
+    color:white;
+    text-shadow: black -2px 10px 24px;
+}
+/* start of first section */
+#t-train-name{
+    font-family: 'Arvo', serif;
+    text-shadow: black -1px 5px 5px;
+}
+#label-name{
+    color:black;
+    text-shadow: black -1px 5px 11px;
+}
+#train-name{
+    background-color: rgb(158, 42, 4, .7);
+    color:white;
+    font-family: 'Arvo', serif;
+}
+/* start of second section */
+#t-destination{
+    font-family: 'Arvo', serif;
+    text-shadow: black -1px 5px 5px;
+}
+#label-destination{
+    color:black;
+    text-shadow: black -1px 5px 11px;
+}
+#destination{
+    background-color: rgb(158, 42, 4, .7);
+    color:white;
+    font-family: 'Arvo', serif;
+}
+/* start of third section */
+#t-next-arrival{
+    font-family: 'Arvo', serif;
+    text-shadow: black -1px 5px 5px;
+}
+#label-first-time{
+    color:black;
+    text-shadow: black -1px 5px 11px;
+}
+#time-departed{
+    background-color:rgb(158, 42, 4, .7);
+    color:white;
+    font-family: 'Arvo', serif;
+}
+/* start of fourth section */
+#t-frequency{
+    font-family: 'Arvo', serif;
+    text-shadow: black -1px 5px 5px;
+}
+#label-frequency{
+    color:black;
+    text-shadow: black -1px 5px 11px;
+}
+#frequency{
+    background-color: rgb(158, 42, 4, .7);
+    color:white;
+    font-family: 'Arvo', serif;
+}
+/* hours and minutes section */
+#train-hours{
+    background-color: rgb(158, 42, 4, .7);
+    color:white;
+    font-family: 'Arvo', serif;
+}
+#t-minutes-away{
+    font-family: 'Arvo', serif;
+    text-shadow: black -1px 5px 5px;
+}
+#train-minutes{
+    background-color: rgb(158, 42, 4, .7);
+    color: white;
+    font-family: 'Arvo', serif;
+}
+#submit-button{
+    color:black;
+    text-shadow: black -1px 5px 11px;
+}
