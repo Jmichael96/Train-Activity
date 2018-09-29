@@ -103,3 +103,9 @@ body{
     color:black;
     text-shadow: black -1px 5px 11px;
 }
+#submit-button:hover{
+    background-color:white;
+    box-shadow: white 0px 2px 7px;
+    color:rgb(155, 155, 155); 
+    text-shadow: black -1px 5px 5px;
+}

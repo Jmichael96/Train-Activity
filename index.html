@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
+<div class="container rounded p-3">
     <div id="jumbo" class="jumbotron">
         <h1 id="head" class="text-center">TRAIN TIME</h1> 
     </div>
@@ -23,15 +23,11 @@
                 <th id="t-train-name" scope="col">Train Name</th>
                 <th id="t-destination"scope="col">Destination</th>
                 <th id="t-frequency" scope="col">Frequency (min)</th>
-                <th id="t-next-arrival"scope="col">Next Arrival</th>
-                <th id="t-minutes-away"scope="col">Minutes Away</th>
+                <th id="t-next-arrival" scope="col">Next Arrival</th>
+                <th id="t-minutes-away" scope="col">Minutes Away</th>
               </tr>
             </thead>
             <tbody class="tBod">
-                <!-- <td id="nameT"></td>
-                <td id="destinationT"></td>
-                <td id="frequencyT"></td>
-                <td id="arrivalT"></td> -->
             </tbody>
         </table>
     </div> 
@@ -41,21 +37,21 @@
                 <div class="input-group-prepend">
                     <label id="label-name" class="input-group-text">Train Name</label>
                 </div>
-                <input type="text" class="form-control text-white" id="train-name">
+                <input type="text" required class="form-control text-white" id="train-name">
             </div>
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label id="label-destination" class="input-group-text">Destination</label>
                 </div>
-                <input type="text" class="form-control text-white" id="destination">
+                <input type="text" required class="form-control text-white" id="destination">
             </div>
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label id="label-first-time"class="input-group-text">First Train Time></label>
                 </div>
-                    <select required class="custom-select" id="train-hours">
+                    <select required class="custom-select" id="hours">
                         <option selected value="">Hours (HH)</option>
                         <option value="00">00 (12 am)</option>
                         <option value="01">01 (1 am)</option>
@@ -83,7 +79,7 @@
                         <option value="23">23 (11 pm)</option>
                     </select>
                 
-                    <select required class="custom-select" id="train-minutes">
+                    <select required class="custom-select" id="minutes">
                         <option selected value="">Minutes (MM)</option>
                         <option value="00">:00</option>
                         <option value="05">:05</option>
@@ -104,7 +100,7 @@
                     <div class="input-group-prepend">
                         <label id="label-frequency"class="input-group-text">Frequency(Min)</label>
                     </div>
-                    <input type="text" class="form-control text-white" id="frequency">
+                    <input type="text" required class="form-control text-white" id="frequency">
                 </div>
 
             <button id="submit-button" type="submit" class="btn btn-default">SUBMIT</button>
