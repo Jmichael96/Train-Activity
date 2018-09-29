@@ -33,8 +33,7 @@ function gotData(data){
     };
 
     //submit button for all the inputs 
-		$("#submit-button").on("click",function(event){
-      // if(name = '' || destination = '' ||
+$("#submit-button").on("click",function(event){
 
       event.preventDefault();
 
@@ -52,13 +51,16 @@ function gotData(data){
         frequency: frequency,
         name: name
       };
-
+      if(name === '' || destination === '' || arrivalTime === ''
+      || frequency === '')
+    {
+     alert("Please fill out every option in the field below.");
+    }else{
       clearTraining();
       ref.push(trainMaze);
-
-    });
-      
-
+    };
+    console.log(trainMaze);
+});
 
 
   function calcNextArrival(x, y){
