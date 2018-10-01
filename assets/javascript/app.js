@@ -14,8 +14,11 @@ $(document).ready(function() {
   var nextTrain = 0;
   var remaining = 0;
 
+  //sound for submit button 
+  var trainSound = new Audio("./assets/sounds/train.mp3");
+
   var	database = firebase.database();
-  
+  // declaring values to snapshot and gotData
   var ref = database.ref();
   ref.on("value",(function(snapshot){
     gotData(snapshot);
@@ -24,7 +27,7 @@ $(document).ready(function() {
   function clearTraining(){
     $("#name, #destination, #hours, #minutes, #frequency").val("");
   };
-
+//gotData function with for loop
 function gotData(data){
     var trainTable = $("td");
     for (var i = 0; i < trainTable.length; i++){
@@ -36,8 +39,8 @@ function gotData(data){
 $("#submit-button").on("click",function(event){
 
       event.preventDefault();
-
-      
+    trainSound.play();
+      //creating variables for inputs
 		var	name = $("#train-name").val().trim();
 		var	destination = $("#destination").val().trim();
     var hours = $("#hours").val();
@@ -51,6 +54,7 @@ $("#submit-button").on("click",function(event){
         frequency: frequency,
         name: name
       };
+      //if an event is blank stop and alert
       if(name === '' || destination === '' || arrivalTime === ''
       || frequency === '')
     {
@@ -62,7 +66,7 @@ $("#submit-button").on("click",function(event){
     console.log(trainMaze);
 });
 
-
+//calculation for the next arrival
   function calcNextArrival(x, y){
 
     var frequency = x;
@@ -83,7 +87,7 @@ $("#submit-button").on("click",function(event){
     return [result, tMinutesTillTrain];
     
   };
-  
+  //appending everything on the table
     ref.on("child_added", function(snapshot){
       $(".tBod").append(`
       <tr>
