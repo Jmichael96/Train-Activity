@@ -4,4 +4,5 @@
 Follow this link and look at the excitement!
 
 ## The learning experience:
-The largest obstical I had in this project was 
+One of the largest obsticles I had in this project was being able to asign values to 
+the functions I was calling from the database. 
