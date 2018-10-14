@@ -17,7 +17,7 @@ $(document).ready(function() {
   //sound for submit button 
   var trainSound = new Audio("./assets/sounds/train.mp3");
 
-  var	database = firebase.database();
+  var database = firebase.database();
   // declaring values to snapshot and gotData
   var ref = database.ref();
   ref.on("value",(function(snapshot){
@@ -35,20 +35,22 @@ function gotData(data){
       console.log(trainTable);
     };
 
-    //submit button for all the inputs 
+//submit button for all the inputs 
 $("#submit-button").on("click",function(event){
 
-      event.preventDefault();
+    event.preventDefault();
+	
     trainSound.play();
-      //creating variables for inputs
-		var	name = $("#train-name").val().trim();
-		var	destination = $("#destination").val().trim();
+	
+    //creating variables for inputs
+    var name = $("#train-name").val().trim();
+    var destination = $("#destination").val().trim();
     var hours = $("#hours").val();
     var minutes = $("#minutes").val();
     var frequency = $("#frequency").val().trim();
     var arrivalTime = hours + minutes;
 
-      var trainMaze = {
+    var trainMaze = {
         arrivalTime: arrivalTime,
         destination: destination,
         frequency: frequency,
@@ -73,7 +75,7 @@ $("#submit-button").on("click",function(event){
     var firstTime = y;
     
 
-		var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
+    var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
 
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
     
